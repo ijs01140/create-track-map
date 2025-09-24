@@ -27,7 +27,7 @@ repositories {
   mavenCentral()
   maven("https://jitpack.io")  // MixinExtras, Fabric ASM
   maven("https://maven.jamieswhiteshirt.com/libs-release")  // Reach Entity Attributes
-  maven("https://api.modrinth.com/maven")  // LazyDFU
+  maven("https://api.modrinth.com/maven")  // LazyDFU, Create Forge
   maven("https://maven.tterrag.com/")  // Create Forge, Flywheel
   maven("https://maven.theillusivec4.top/")  // Curios
   maven("https://thedarkcolour.github.io/KotlinForForge/")
@@ -54,7 +54,7 @@ minecraft {
 dependencies {
   minecraft("net.neoforged:forge:${minecraft_version}-${forge_version}")
   implementation("thedarkcolour:kotlinforforge:$forge_kotlin_version")
-  implementation(fg.deobf("com.simibubi.create:create-${minecraft_version}:${create_version}:slim"))
+  implementation(fg.deobf("maven.modrinth:create:${minecraft_version}-${create_version}"))
 
   shadowDep("io.ktor:ktor-server-core-jvm:$ktor_version")
   shadowDep("io.ktor:ktor-server-cio-jvm:$ktor_version")
